@@ -1,3 +1,13 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -14,4 +24,13 @@
     width: 300px;
     height: 300px;
     margin-bottom: 20px;
+}
+
+#dark-mode-button {
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#dark-mode-button.slide {
+  transform: translateX(100%);
 }

@@ -1,5 +1,5 @@
 const apiUrl = "https://dog.ceo/api/breeds/image/random/";
-const imagesPerLoad = 5;
+const imagesPerLoad = 10;
 
 let startIndex = 0;
 
@@ -27,6 +27,17 @@ async function fetchDogImages() {
     console.log("Error fetching dog images:", error);
   }
 }
+
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+
+  const button = document.getElementById("dark-mode-button");
+  button.classList.toggle("slide");
+  button.textContent = body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+}
+
+document.getElementById("dark-mode-button").addEventListener("click", toggleDarkMode);
 
 function isAtBottom() {
   const windowHeight = window.innerHeight;
